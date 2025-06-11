@@ -6,6 +6,7 @@ Prompts for implementing a Plan & Execute workflow in Cursor or similar AI codin
 
 - [`planner.md`](./prompts/planner.md) - Planning mode prompt
 - [`executor.md`](./prompts/executor.md) - Execution mode prompt
+- [`isolated-executor.md`](./prompts/isolated-executor.md) - Isolated execution mode prompt
 
 ## Setup in Cursor
 
@@ -49,7 +50,7 @@ Example `plan.md` file:
 2. Add `plan.md` to the context
 3. Type "go" to start execution
 4. The executor will implement the task and commit the changes
-8. Type "go" to continue to the next task until all tasks are complete
+5. Type "go" to continue to the next task until all tasks are complete
 
 ### Isolated Executor
 
