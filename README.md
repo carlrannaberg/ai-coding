@@ -27,6 +27,14 @@ Example `plan.md` file:
 - [ ] 1.2 Update API endpoints to handle new validation rules
 ```
 
+#### Usage
+
+1. Switch to Planner mode
+2. Include relevant files and folders in the context
+3. Describe your idea and create a plan through iterative Q&A
+4. Give the agent permission to output `plan.md` file
+5. Create the plan.md file in the root of the project
+
 ### Executor Mode
 1. Create a new custom mode called "Executor"
 2. Model: Claude Sonnet 4
@@ -35,22 +43,19 @@ Example `plan.md` file:
 5. Enable auto-apply edits, auto-run, and auto-fix errors
 6. Paste the [executor.md](./prompts/executor.md) prompt
 
-## Usage
+#### Usage
 
-1. Switch to Planner mode
-2. Include relevant files and folders in the context
-3. Describe your idea and create a `plan.md` file through iterative Q&A
-4. Switch to Executor mode
-5. Add `plan.md` to the context
-6. Type "go" to start execution
-7. The executor will implement the task and commit the changes
+1. Switch to Executor mode
+2. Add `plan.md` to the context
+3. Type "go" to start execution
+4. The executor will implement the task and commit the changes
 8. Type "go" to continue to the next task until all tasks are complete
 
-## Isolated Executor
+### Isolated Executor
 
 The [isolated-executor.md](./prompts/isolated-executor.md) prompt is a variant of the executor prompt that is used to run the executor agent in parallel in its own git worktree.
 
-### Setup
+#### Setup
 
 1. Create a new custom mode called "Isolated Executor"
 2. Model: Claude Sonnet 4
@@ -60,7 +65,7 @@ The [isolated-executor.md](./prompts/isolated-executor.md) prompt is a variant o
 6. Add keybinding for quick access (e.g., `⌘⇧I`)
 7. Paste the [isolated-executor.md](./prompts/isolated-executor.md) prompt
 
-### Usage
+#### Usage
 
 1. Open 2-3 new chat tabs in Cursor
 2. In each tab, switch to Isolated Executor mode
